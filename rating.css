@@ -1,0 +1,105 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--colour-orange:  hsl(25, 97%, 53%);
+	--colour-white: hsl(0, 100%, 100%);
+	--colour-dark: rgba(32,39,49,255);
+}
+body, .container1, .container2, .options, .icon, .star, .thanks, .rankdiv, .grat, .appr{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.icon {
+	justify-content: flex-start;
+}
+body {
+	height: 100vh;
+	background-color: rgba(20,21,25,255);
+	font-family: "Overpass", sans-serif;
+	font-weight: 700;
+}
+.container1, .container2 {
+	width: 400px;
+	height: 400px;
+	background-color: var(--colour-dark);
+	flex-direction: column;
+	justify-content: space-evenly;
+	border-radius: 10%;
+}
+.container2 {
+	font-size: 1.5rem;
+}
+.text, .options, .submit-btn, .icon, .thanks, .rankdiv, .grat, .appr, .supp{
+	width: 80%;
+}
+h1 {
+	color: rgba(235,236,236,255);
+}
+p{
+	color: rgba(105,112,122,255);
+	font-size: 15px;
+}
+.rankdiv {
+	width: 50%;
+	height: 25px;
+	background-color: rgba(38,47,56,255);
+	padding: 5px;
+	border-radius: 12.5px;
+}
+.rank {
+	color: var(--colour-orange);
+}
+.options {
+	justify-content: space-between;
+}
+.option, .star {
+	background-color: rgba(38,47,56,255) ;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.option {
+	color: rgba(120,128,141,255);
+	font-size: 12.5px;
+}
+.option:hover {
+	background-color: var(--colour-orange);
+	color: var(--colour-dark);
+}
+.submit-btn {
+	color: var(--colour-dark);
+	background-color: var(--colour-orange);
+	height: 50px;
+	border-radius: 25px;
+	font-size: 1.3rem;
+	letter-spacing: 2.5px;
+}
+.submit-btn:hover {
+	background-color: var(--colour-white);
+}
+.hidden {
+	display: none;
+}
+@media screen and (max-width: 430px) {
+	.container1, .container2 {
+		width: 300px;
+		height: 300px;
+	}
+	.option, .star {
+		width: 40px;
+		height: 40px;
+	}
+	p{
+		font-size: 11px;
+	}
+	.submit-btn {
+		font-size: 1rem;
+	}
+	.grat {
+		font-size: 1.5rem;
+	}
+}
