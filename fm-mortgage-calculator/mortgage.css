@@ -1,0 +1,185 @@
+* {
+	overflow-x: hidden;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Plus Jakarta Sans", sans-serif;
+	transition: background-color 2.5s ease, color 1.5s ease, border-color 0.5s ease;
+}
+:root {
+	--colour-red: hsl(4, 69%, 50%);
+	--colour-green: hsl(61, 70%, 52%);
+	--colour-aqua: hsl(202, 86%, 94%);
+	--colour-white: hsl(0, 0%, 100%);
+	--colour-sea: hsl(203, 41%, 72%);
+	--colour-navy: hsl(201, 54%, 16%);
+	--colour-black: black;
+}
+body, .form-box, form, button[type="submit"], .mode, .toggle_div, .repayments, .box, .container, .controls, .loading{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+body, .box, form, .toggle_div, .mode, button, .container, .controls, .loading {
+	width: 100%;
+}
+body {
+	background-color:  var(--colour-sea);
+}
+body.dark {
+	--colour-red : hsl(4, 69%, 50%);
+	--colour-green: hsl(61, 60%, 38%);
+	--colour-aqua: hsl(202, 15%, 10%);
+	--colour-white: hsl(0, 0%, 85%);
+	--colour-sea: hsl(200, 10%, 18%);
+	--colour-navy: hsl(201, 45%, 8%);
+	--colour-black: white;
+}
+#rotate {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 20px;
+	height: 20px;
+	line-height: 1;
+	transform-origin: center center;
+	transition: transform 0.5s ease;
+}
+input[type="number"]:first-of-type, .form-box, .help, h1, .repayments, hr, .repayments > div  {
+	width: 90%;
+}
+body, .form-box, form, .toggle_div, .repayments, .container, .loading{
+	flex-direction: column;
+}
+.box, form, .toggle_div, .repayments, .container, .loading{
+	justify-content: space-evenly;
+}
+.mode, button{
+	height: 40px;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+section {
+	background-color: var(--colour-aqua);
+	color: var(--colour-black);
+	text-align: center;
+}
+input[type="number"], section{
+	height: 100%;
+}
+#s1 {
+	width: 10%;
+}
+#s2, #s3 {
+	width: 25%;
+}
+.error {
+	color: var(--colour-red);
+}
+.box {
+	height: 40px;
+	border: 1px solid var(--colour-black);
+	border-radius: 5px;
+}
+.form-box {
+	height: 100vh;
+	width: 100%;
+	background-color: var(--colour-white);
+}
+form {
+	height: 90%;
+	width: 90%;
+	align-items: flex-start;
+}
+#clear, #switch{
+	border: none;
+	width: 50%;
+	background: var(--colour-white);
+	text-decoration: underline;
+	height: 20px;
+}
+#clear {
+	text-align: left;
+}
+#switch {
+	text-align: right;
+}
+button[type="submit"]{
+	background-color: var(--colour-green);
+	font-size: 1.2rem;
+}
+.mode {
+	padding-left: 10px;
+	font-size: 1.2rem;
+	justify-content: flex-start;
+}
+.mode:hover, button[type="submit"]:hover {
+	cursor: pointer;
+	border: 1px solid var(--colour-green);
+}
+.fa-solid {
+	color: white !important;
+	font-family: "Font Awesome 6 Free";
+}
+.toggle_div, .loading {
+	height: 80vh;
+	background-color: var(--colour-navy);
+	color: var(--colour-white);
+}
+hr {
+	color: var(--colour-white);
+}
+.empty-state {
+	width: 150px;
+	height: 150px;
+}
+.repayments {
+	background-color: var(--colour-navy);
+	height: 45%;
+	border-radius: 20px;
+	border-top: 3px solid var(--colour-green);
+}
+.repayments > div {
+	height: 40%;
+}
+.mnt-rep {
+	color: var(--colour-green);
+	font-size: 2.5rem;
+}
+.rep-term {
+	font-size: 1.8rem;
+}
+.spinner {
+	animation: spin 1s linear infinite;
+	width: 200px;
+	height: 200px;
+	fill: white;
+}
+@keyframes spin {
+	0% { transform: rotate(0deg);}
+	100% { transform: rotate(360deg);}
+}
+@media screen and (min-width: 625px) {
+	body {
+		height: 100vh;
+	}
+	.container {
+		width: 90%;
+		max-width: 760px;
+		flex-direction: row;
+		background-color: var(--colour-white);
+		height: 70vh;
+		border-radius: 50px;
+	}
+	.form-box, .toggle_div, .loading {
+		width: 50%;
+		height: 100%;
+	}
+	.toggle_div, .loading {
+		border-bottom-left-radius: 25px;	
+	}
+}
+.hidden {
+	display: none;
+}
+/* Spin & Calculate: A Mortgage App with Soul 🔄🎧 */
