@@ -113,6 +113,9 @@ button[type="submit"]{
 	font-size: 1.2rem;
 	justify-content: flex-start;
 }
+.mode label {
+	display: block;
+}
 .mode:hover, button[type="submit"]:hover {
 	cursor: pointer;
 	border: 1px solid var(--colour-green);
